@@ -1,3 +1,13 @@
+/*
+	Author: Josef Holmer
+	Edited by Jan Wielgus
+	Date: 01.05.2017
+	
+	It's code for arduino nano quadrocopter. There will be some new functions like altitude hold and some others.
+	I want to write new quadrocopter (or hex) code with parts from this code.
+*/
+
+
 #define MPU6050_AUX_VDDIO          0x01   // R/W
 #define MPU6050_SMPLRT_DIV         0x19   // R/W
 #define MPU6050_CONFIG             0x1A   // R/W
