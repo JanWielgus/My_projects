@@ -831,30 +831,32 @@ void mpu6050_init()
 void motor_arm()
 {
 	delay(2000);
-	myservoT.writeMicroseconds(800); //for degees 0-180  
-	myservoR.writeMicroseconds(800); //for degees 0-180  
-	myservoB.writeMicroseconds(800); //for degees 0-180  
-	myservoL.writeMicroseconds(800); //for degees 0-180 
+	
+	myservoT.writeMicroseconds(800); //for degees 0-180
+	myservoR.writeMicroseconds(800); //for degees 0-180
+	myservoB.writeMicroseconds(800); //for degees 0-180
+	myservoL.writeMicroseconds(800); //for degees 0-180
+	
 	delay(4700);
 }
 
 
 void motor_idle()
 { 
-	myservoT.write(57); //for degees 0-180  
-	myservoR.write(57); //for degees 0-180  
-	myservoB.write(57); //for degees 0-180  
-	myservoL.write(57); //for degees 0-180  
+	myservoT.write(57); //for degees 0-180
+	myservoR.write(57); //for degees 0-180
+	myservoB.write(57); //for degees 0-180
+	myservoL.write(57); //for degees 0-180
 }
 
 
 void motor_off()
 { 
 	main_power = 19;  
-	myservoT.write(19); //for degees 0-180  
-	myservoR.write(19); //for degees 0-180  
-	myservoB.write(19); //for degees 0-180  
-	myservoL.write(19); //for degees 0-180  
+	myservoT.write(19); //for degees 0-180
+	myservoR.write(19); //for degees 0-180
+	myservoB.write(19); //for degees 0-180
+	myservoL.write(19); //for degees 0-180
 }
 
 
@@ -863,13 +865,13 @@ void stabilize()
 	P_x = (x_a+rad_tilt_LR)*2.4;
 	P_y = (y_a+rad_tilt_TB)*2.4;
 	
-	I_x = I_x + (x_a+rad_tilt_LR)*dt_*3.7;
-	I_y = I_y + (y_a+rad_tilt_TB)*dt_*3.7;
+	I_x += (x_a+rad_tilt_LR)*dt_*3.7;
+	I_y += (y_a+rad_tilt_TB)*dt_*3.7;
 	
 	D_x = x_vel*0.7;
 	D_y = y_vel*0.7;
 	
-	//2.4 3.7 0.7
+	//2.4, 3.7, 0.7
 	//YAW  
 
 	P_z = (z_ang + wanted_z_ang)*2.0;
@@ -881,7 +883,7 @@ void stabilize()
 	// D_z = 0;
 	// P_z = 0;
 
-	//3.2, 4, 0.6 works
+	//3.2, 4.0, 0.6 works
 
 	//stop I from going berserk;
 	I_x = constrain(I_x, -30, 30);
@@ -890,7 +892,7 @@ void stabilize()
 
 
 	x_adder = P_x + I_x + D_x;
-	y_adder = P_y + I_y + D_y;  
+	y_adder = P_y + I_y + D_y;
 }  
 
 
@@ -916,7 +918,6 @@ void set_power()
 	//  if(power_L > 57){
 	myservoL.writeMicroseconds(power_L); //for degees 0-180 
 	//  }else{myservoL.write(57);} 
-
 }
 
 
