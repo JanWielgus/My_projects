@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Atmel Studio Solution File, Format Version 11.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "HQbarometrTest", "HQbarometrTest.cppproj", "{ADE4D89B-E81A-4612-891E-76EC7049192E}"
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Regulator_PID_v1", "Regulator_PID_v1.cppproj", "{4C2DC1ED-4B6A-4FC1-B404-8BEAF4C9D878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|AVR = Release|AVR
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ADE4D89B-E81A-4612-891E-76EC7049192E}.Debug|AVR.ActiveCfg = Debug|AVR
-		{ADE4D89B-E81A-4612-891E-76EC7049192E}.Debug|AVR.Build.0 = Debug|AVR
-		{ADE4D89B-E81A-4612-891E-76EC7049192E}.Release|AVR.ActiveCfg = Release|AVR
-		{ADE4D89B-E81A-4612-891E-76EC7049192E}.Release|AVR.Build.0 = Release|AVR
+		{4C2DC1ED-4B6A-4FC1-B404-8BEAF4C9D878}.Debug|AVR.ActiveCfg = Debug|AVR
+		{4C2DC1ED-4B6A-4FC1-B404-8BEAF4C9D878}.Debug|AVR.Build.0 = Debug|AVR
+		{4C2DC1ED-4B6A-4FC1-B404-8BEAF4C9D878}.Release|AVR.ActiveCfg = Release|AVR
+		{4C2DC1ED-4B6A-4FC1-B404-8BEAF4C9D878}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

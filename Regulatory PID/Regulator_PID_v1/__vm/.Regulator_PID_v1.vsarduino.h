@@ -19,10 +19,9 @@
 #define ARDUINO_AVR_NANO
 #define ARDUINO_ARCH_AVR
 
-float dousr[]           void setup();
-void checkSettings();
+//
 //
 
 #include "pins_arduino.h" 
 #include "arduino.h"
-#include "HQbarometrTest.ino"
+#include "Regulator_PID_v1.ino"

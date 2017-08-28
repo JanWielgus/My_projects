@@ -1,11 +1,15 @@
     #include <Wire.h>
     #include <MS5611.h>
     #include "FiltrKalmana.h"
+	
+	#define ilUsr 2 //iloœæ do uœrednienia
+	#define dt 0.01 // oryginalnie 0.01 (10 ms)!
      
     MS5611 baro;
     FiltrKalmanaClass filtrk;
      
     double referencePressure;
+	float dousr[]
      
     void setup()
     {
@@ -44,10 +48,15 @@
     {
       // Odczyt przekonwertowanych wartosci
       long realPressure = baro.readPressure(true);
+	  
+	  
+	  
+	  
      
       // Obliczanie wysokosci
-      float absoluteAltitude = baro.getAltitude(realPressure);
-      uint16_t pofiltrze = (uint16_t)(filtrk.update(absoluteAltitude, 0)*100);
+      //float absoluteAltitude = baro.getAltitude(realPressure);
+      //uint16_t pofiltrze = (uint16_t)(filtrk.update(absoluteAltitude, 0)*100);
+	  uint16_t pofiltrze = (uint16_t)(filtrk.update(realPressure, 0)*10);
       
       //Serial.print(" m\t");
       Serial.println(pofiltrze);
